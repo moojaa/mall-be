@@ -13,6 +13,7 @@ app.use(bodyParser.json())
 app.use("/api",indexRouter)
 
 const mongoURI = process.env.LOCAL_DB_ADDRESS
+
 mongoose
     .connect(mongoURI, { useNewUrlParser: true })
     .then(() => console.log("mongoose connected"))
